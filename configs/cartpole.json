@@ -1,0 +1,22 @@
+{
+    "env": "cartpole",
+    "agent": {
+        "name": "dpets",
+        "model": "cartpole_model",
+        "optimizer": "CEM",
+        "predict_length": 25,
+        "num_particles": 20,
+        "ensemble_size": 5,
+        "dropout": 0.05,
+        "dropout_mask_nums": 5,
+        "train_epoch": 10
+    },
+    "experiment": {
+        "name": "MBRL",
+        "horizon": 150,
+        "random_horizon": 150,
+        "ntrain_iters": 10
+    },
+    "device": "cuda",
+    "random_seed": 0
+}
