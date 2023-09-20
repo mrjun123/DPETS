@@ -1,8 +1,8 @@
 {
     "env": "cartpole",
     "agent": {
-        "name": "dropout_pets",
-        "model": "dropout_boostrap",
+        "name": "dpets",
+        "model": "cartpole_model",
         "controller": "MPC",
         "optimizer": "CEM",
         "predict_length": 25,
@@ -15,14 +15,11 @@
         "dynamics_weight_decay_rate": 1,
         "dynamics_lr_gamma": 1,
         "lr_scheduler": [80, 140],
-        "dynamics_type": "bootstrap",
         "dataloader": "free_capacity",
         "train_batch_size": 30,
         "dynamics_hidden_size": 200,
         "dropout": 0.05,
         "dropout_mask_nums": 6,
-        "mode": "None",
-        "cost_mode": "None",
         "MPC": {
             "reward_var": false,
             "done": false,
@@ -41,9 +38,9 @@
     },
     "experiment": {
         "name": "MBRL",
-        "horizon": 1000,
-        "random_horizon": 1000,
-        "ntrain_iters": 300,
+        "horizon": 200,
+        "random_horizon": 200,
+        "ntrain_iters": 15,
         "random_ntrain_iters": 1
     },
     "device": "cuda",
