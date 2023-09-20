@@ -19,9 +19,6 @@ def main(config):
 
     run_dir_path = 'runs/mymbrl'
     if config_name != 'custom':
-        if config['experiment']['noise'] > 0:
-            run_dir_path = 'runs/noise'+str(int(config['experiment']['noise']*100))+'/'+config_name+'/mymbrl'
-        else:
             run_dir_path = 'runs/'+config_name+'/mymbrl'
     
     run_dir = new_run_directory(run_dir_path)
