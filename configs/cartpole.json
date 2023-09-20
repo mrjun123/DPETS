@@ -13,8 +13,8 @@
     },
     "experiment": {
         "name": "MBRL",
-        "horizon": 150,
-        "random_horizon": 150,
+        "horizon": 200,
+        "random_horizon": 200,
         "ntrain_iters": 10
     },
     "device": "cuda",
