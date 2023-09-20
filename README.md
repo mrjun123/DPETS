@@ -2,7 +2,7 @@
 
 Code to reproduce the experiments in [Practical Probabilistic Model-based Deep Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling](). This paper is currently submitted to IEEE Transactions on Neural Networks and Learning Systems (TNNLS) for peer review.
 
-![Snipaste_2023-09-20_13-56-43](https://markdown-1259473343.cos.ap-beijing.myqcloud.com/uPic/Snipaste_2023-09-20_13-56-43.png)
+![Snipaste_2023-09-20_13-56-43](https://raw.githubusercontent.com/mrjun123/DPETS/main/images/method.png)
 
 ## Requirements
 
