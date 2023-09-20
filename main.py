@@ -72,12 +72,4 @@ if __name__ == '__main__':
     if seed != -1:
         config['random_seed'] = seed
 
-    if not len(config['optuna']['suggests']):
-        main(config)
-    else:
-        storage_name = "sqlite:///optuna.db"
-        study = optuna.create_study(
-            pruner = optuna.pruners.MedianPruner(n_warmup_steps=3), direction="maximize",
-            study_name="fashion_mnist_torch", storage=storage_name, load_if_exists=True
-        )
-        study.optimize(main, n_trials=20, timeout=1200)
+    main(config)
