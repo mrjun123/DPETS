@@ -26,15 +26,11 @@ class CartpoleModel(nn.Module):
         self.hidden1_mask = None
         self.hidden2_mask = None
         self.hidden3_mask = None
-        self.hidden4_mask = None
-        self.hidden5_mask = None
 
         self.hidden_mask_indexs = None
         self.hidden1_mask_select = None
         self.hidden2_mask_select = None
         self.hidden3_mask_select = None
-        self.hidden4_mask_select = None
-        self.hidden5_mask_select = None
 
         self.in_features = in_features
         self.out_features = out_features
@@ -45,7 +41,7 @@ class CartpoleModel(nn.Module):
 
         self.lin2_w, self.lin2_b = get_affine_params(ensemble_size, hidden_size, hidden_size)
         
-        self.lin5_w, self.lin5_b = get_affine_params(ensemble_size, hidden_size, out_features)
+        self.lin3_w, self.lin3_b = get_affine_params(ensemble_size, hidden_size, out_features)
 
         self.inputs_mu = nn.Parameter(torch.zeros(in_features).to(device), requires_grad=False)
         self.inputs_sigma = nn.Parameter(torch.zeros(in_features).to(device), requires_grad=False)
@@ -58,9 +54,9 @@ class CartpoleModel(nn.Module):
         lin0_decays = 0.0001 * (self.lin0_w ** 2).sum() / 2.0
         lin1_decays = 0.00025 * (self.lin1_w ** 2).sum() / 2.0
         lin2_decays = 0.00025 * (self.lin2_w ** 2).sum() / 2.0
-        lin5_decays = 0.0005 * (self.lin5_w ** 2).sum() / 2.0
+        lin3_decays = 0.0005 * (self.lin3_w ** 2).sum() / 2.0
 
-        return lin0_decays + lin1_decays + lin2_decays + lin5_decays
+        return lin0_decays + lin1_decays + lin2_decays + lin3_decays
 
     def forward(self, inputs, ret_logvar=False, open_dropout=True):
 
@@ -79,7 +75,7 @@ class CartpoleModel(nn.Module):
         if self.dropout and open_dropout:
             inputs = inputs * self.hidden3_mask_select
 
-        inputs = inputs.matmul(self.lin5_w) + self.lin5_b
+        inputs = inputs.matmul(self.lin3_w) + self.lin3_b
 
         mean = inputs[:, :, :self.out_features // 2]
 
