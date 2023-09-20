@@ -18,14 +18,14 @@ Experiment for a specific configuration can be run using:
 python main.py --config cartpole
 ```
 
-The specific configuration file is located in the `configs` directory and the default configuration file can be located in the root directory `default_ config.json` was found, which allows you to modify the experimental parameters.
+The specific configuration file is located in the `configs` directory and the default configuration file can be located in the root directory `default_config.json` was found, which allows you to modify the experimental parameters.
 
 ## Logging
 
 We use Tensorboard to record experimental data, you can view runs with:
 
 ```python
-tensorboard --logdir ./ --port=6006 --host=0.0.0.0
+tensorboard --logdir ./runs/ --port=6006 --host=0.0.0.0
 ```
 
 ## Reference
