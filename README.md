@@ -1,8 +1,8 @@
 # Dropout-based Probabilistic Ensembles with Trajectory Sampling
 
-Code to reproduce the experiments in [Practical Probabilistic Model-based Deep Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling](). This paper is currently submitted to IEEE Transactions on Neural Networks and Learning Systems (TNNLS) for peer review.
+Code to reproduce the experiments in [Practical Probabilistic Model-based Deep Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling](https://arxiv.org/abs/2309.11089). This paper is currently submitted to IEEE Transactions on Neural Networks and Learning Systems (TNNLS) for peer review.
 
-![Snipaste_2023-09-20_13-56-43](https://raw.githubusercontent.com/mrjun123/DPETS/main/images/method.png)
+![method.png](https://raw.githubusercontent.com/mrjun123/DPETS/main/images/method.png)
 
 Please feel free to contact us regarding to the details of implementing DPETS. (Wenjun Huang: wj.huang1@siat.ac.cn Yunduan Cui: cuiyunduan@gmail.com)
 ## Requirements
@@ -30,6 +30,13 @@ tensorboard --logdir ./runs/ --port=6006 --host=0.0.0.0
 ```
 
 ## Reference
-
-Loading..
-
+```
+@misc{huang2023practical,
+      title={Practical Probabilistic Model-based Deep Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling}, 
+      author={Wenjun Huang and Yunduan Cui and Huiyun Li and Xinyu Wu},
+      year={2023},
+      eprint={2309.11089},
+      archivePrefix={arXiv},
+      primaryClass={eess.SY}
+}
+```
