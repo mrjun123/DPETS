@@ -47,12 +47,10 @@ if __name__ == '__main__':
     
     parser = argparse.ArgumentParser(description='This is mymbrl.')
     parser.add_argument('--config', type=str, default='custom')
-    parser.add_argument('--noise', type=float, default=0)
     parser.add_argument('--seed', type=int, default=-1)
 
     args = parser.parse_args()
     config_name = args.config
-    noise = args.noise
     seed = args.seed
     
     with open("configs/"+config_name+".json", 'r', encoding='UTF-8') as f:
@@ -61,9 +59,6 @@ if __name__ == '__main__':
         default_config = json.loads(f.read())
 
     config = merge_dict(default_config, config)
-
-    if noise > 0:
-        config['experiment']['noise'] = noise
     if seed != -1:
         config['random_seed'] = seed
 
