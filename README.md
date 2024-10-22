@@ -1,6 +1,6 @@
 # Dropout-based Probabilistic Ensembles with Trajectory Sampling
 
-Code to reproduce the experiments in [Practical Probabilistic Model-based Deep Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling](https://arxiv.org/abs/2309.11089). This paper is currently submitted to IEEE Transactions on Neural Networks and Learning Systems (TNNLS) for peer review.
+Code to reproduce the experiments in [Practical Probabilistic Model-based Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling](https://ieeexplore.ieee.org/document/10721239). This article has been accepted for publication in IEEE Transactions on Neural Networks and Learning Systems.
 
 ![method.png](https://raw.githubusercontent.com/mrjun123/DPETS/main/images/method.png)
 
@@ -31,12 +31,14 @@ tensorboard --logdir ./runs/ --port=6006 --host=0.0.0.0
 
 ## Reference
 ```
-@misc{huang2023practical,
-      title={Practical Probabilistic Model-based Deep Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling}, 
-      author={Wenjun Huang and Yunduan Cui and Huiyun Li and Xinyu Wu},
-      year={2023},
-      eprint={2309.11089},
-      archivePrefix={arXiv},
-      primaryClass={eess.SY}
-}
+@ARTICLE{10721239,
+  author={Huang, Wenjun and Cui, Yunduan and Li, Huiyun and Wu, Xinyu},
+  journal={IEEE Transactions on Neural Networks and Learning Systems}, 
+  title={Practical Probabilistic Model-Based Reinforcement Learning by Integrating Dropout Uncertainty and Trajectory Sampling}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-15},
+  keywords={Uncertainty;Probabilistic logic;Predictive models;Trajectory;System dynamics;Fitting;Stability analysis;Computational modeling;Robustness;Learning systems;Predictive models;reinforcement learning (RL);robot learning},
+  doi={10.1109/TNNLS.2024.3474169}}
 ```
